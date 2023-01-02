@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="One"/>
+    <Button
+        android:id="@+id/btnTwo"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_alignBaseline="@id/btnOne"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@id/btnOne"
+        android:text="TWO"/>
+    <Button
+        android:id="@+id/btnThree"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@id/btnTwo"
+        android:text="THREE"/>
+
+ <!-- Linear Layout -->
+    <LinearLayout
+        android:id="@+id/lnLayout"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_below="@+id/btnTwo"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_height="150dp">
+        <Button
+            android:id="@+id/lnbtnOne"
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="LY ONE"/>
+        <Button
+            android:id="@+id/lnbtnTwo"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="LN TWO"/>
+        <Button
+            android:id="@+id/lnbtnThree"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="LY ONE"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/lnLayout"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginTop="30dp" >
+        
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/me_and_her"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@id/imgProfile"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:text="@string/profile_name"/>
+
+            <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="15sp"
+                android:text="@string/tv_developer_position"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvCompany"
+                android:layout_width="wrap_content"
+                android:text="PADC Myanmar"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="#C6C2C2"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_below="@id/rlProfile"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imgKaunglay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/kaunglay"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/me_and_her"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is geeting boy"
+            android:textStyle="italic"
+            android:layout_gravity="bottom|end"
+            android:padding="@dimen/margin_medium"/>
+    </FrameLayout>
+
+</RelativeLayout>

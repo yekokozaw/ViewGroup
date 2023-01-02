@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">View Group</string>
+    <string name="edit_name_hint">Your name please</string>
+    <string name="btn_greeting_content">Say hello</string>
+    <string name="cb_apple_content">Apple</string>
+    <string name="cb_orange_content">Orange</string>
+    <string name="cb_mango_content">Mango</string>
+    <string name="btn_check_fruit">Check Fruit</string>
+    <string name="fruit_alert_dialog_title">Selected Fruits</string>
+    <string name="radio_button_male">Male</string>
+    <string name="radio_button_female">Female</string>
+    <string name="tb_turn_on_content">Turning on the guest room light</string>
+    <string name="tb_turn_off_content">Turning off the guest room light</string>
+    <string name="btn_select_date">SELECT DATE</string>
+    <string name="profile_name">David Arcadio</string>
+    <string name="tv_developer_position">Junior Android Developer</string>
+    <string name="btn_next">Next</string>
+    <string name="ride_date">March21,2020 at 10:30 a.m</string>
+</resources>

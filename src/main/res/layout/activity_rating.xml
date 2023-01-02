@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvRideis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_centerHorizontal="true"
+        android:text="Your ride is"/>
+
+    <TextView
+        android:id="@+id/tvCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$5.58"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_below="@id/tvRideis"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ride_date"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_below="@id/tvCash"
+        android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imgBoyProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_below="@id/tvDate"
+            android:scaleType="centerCrop"
+            android:src="@drawable/boy_profile" />
+
+    <TextView
+        android:id="@+id/riderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/imgBoyProfile"
+        android:text="@string/profile_name"/>
+
+    <TextView
+        android:id="@+id/RateDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/riderName"
+        android:text="Rate your driver"/>
+
+    <RatingBar
+        android:id="@+id/rbHmYouLoveDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RateDriver"
+        android:layout_centerHorizontal="true"
+        android:numStars="5"
+        android:rating="3.5"/>
+
+    <EditText
+        android:id="@+id/edtFeedBack"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_below="@id/rbHmYouLoveDriver"
+        android:background="@drawable/custom_input"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/margin_small"
+        android:hint="your feedback"
+        android:layout_width="250dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_below="@id/edtFeedBack"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        />
+</RelativeLayout>
